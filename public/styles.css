@@ -1,0 +1,361 @@
+/* Existing body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Noto Sans Devanagari', sans-serif;
+  background: linear-gradient(135deg, #FFC1CC 0%, #8A2BE2 100%);
+  color: #FFFFFF;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Add prefers-reduced-motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Header adjustments */
+.header {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(45deg, #FF00FF, #8A2BE2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.header .banner-img {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  object-fit: contain; /* Prevent distortion */
+  animation: bounceIn 1s ease-out;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #FFFF00;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.header-content p {
+  font-size: 1rem;
+  color: #FFD700;
+}
+
+/* Form container adjustments */
+.form-container {
+  max-width: 90%; /* More flexible on small screens */
+  margin: 1rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FFA500;
+  animation: slideUp 1s ease-out;
+}
+
+.form-container h2 {
+  font-size: 1.5rem;
+  color: #FFFF00;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+/* Form elements with larger touch targets */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+  width: 100%;
+  padding: 1rem; /* Increased for better tap area */
+  border: 2px solid #8B4513;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #FFFFFF;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form select:focus {
+  border-color: #FF00FF;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  outline: none;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Star ratings with larger size */
+.stars {
+  display: flex;
+  gap: 10px;
+  margin: 0.5rem 0 1rem;
+  justify-content: center;
+}
+
+.stars i {
+  font-size: 2rem; /* Larger for mobile tap */
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stars i:hover,
+.stars i.selected {
+  color: #FFD700;
+  transform: scale(1.2);
+  text-shadow: 0 0 5px #FFD700;
+}
+
+/* Buttons with larger tap area */
+.btn {
+  background: linear-gradient(45deg, #FFA500, #008000);
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem 1.5rem; /* Increased padding */
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-height: 48px; /* Minimum touch target height */
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #008000, #FFA500);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.5);
+}
+
+/* Language toggle with larger gaps */
+.lang-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Increased for better spacing */
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.lang-btn {
+  padding: 0.7rem 1.2rem; /* Larger tap area */
+  border: none;
+  background: #8A2BE2;
+  color: #FFFF00;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px; /* Ensure minimum width */
+}
+
+.lang-btn:hover {
+  background: #FF00FF;
+  transform: scale(1.1);
+}
+
+.lang-btn.active {
+  background-color: #FFD700;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Modal adjustments */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #FFC1CC, #8A2BE2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 350px; /* Reduced for smaller screens */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.5s ease-out;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  color: #FFFF00;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 0.5rem; /* Larger tap area */
+  transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #FF00FF;
+  transform: rotate(90deg);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(90deg, #8B4513, #FFA500);
+  margin-top: 1rem;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  animation: slideUp 1s ease-out;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+th, td {
+  padding: 0.8rem;
+  border: 1px solid #8B4513;
+  text-align: center;
+  color: #333;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+th {
+  background: #FFA500;
+  color: #FFFFFF;
+}
+
+th:hover, td:hover {
+  background: #FFD700;
+  color: #000000;
+}
+
+/* Enhanced media query */
+@media screen and (max-width: 600px) {
+  .form-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .header .banner-img {
+    width: 100%;
+  }
+
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea,
+  .feedback-form select {
+    font-size: 0.95rem;
+    padding: 0.8rem; /* Adjusted for smaller screens */
+  }
+
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .stars i {
+    font-size: 1.5rem; /* Slightly reduced but still tappable */
+  }
+
+  .lang-toggle {
+    gap: 10px;
+  }
+
+  .lang-btn {
+    padding: 0.5rem 1rem;
+    min-width: 60px;
+  }
+
+  .modal-content {
+    max-width: 300px;
+    padding: 1rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAJ ANAJ BHANDAR | Feedback</title>
+  <link rel="stylesheet" href="/public/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="/public/banner.png" alt="RAJ ANAJ BHANDAR Banner" class="banner-img" />
+    <div class="header-content">
+      <h1 data-en="Welcome to RAJ ANAJ BHANDAR" data-hi="राज अनाज भंडार में आपका स्वागत है" data-mr="राज अनाज भंडार मध्ये स्वागत आहे">Welcome to RAJ ANAJ BHANDAR</h1>
+      <p data-en="Your feedback helps us improve our rice quality!" data-hi="आपकी प्रतिक्रिया हमें हमारी चावल की गुणवत्ता में सुधार करने में मदद करती है!" data-mr="तुमची प्रतिक्रिया आमच्या तांदळाच्या गुणवत्तेत सुधारणा करण्यास मदत करते!">Your feedback helps us improve our rice quality!</p>
+    </div>
+  </header>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="hi">हिंदी</button>
+    <button class="lang-btn" data-lang="mr">मराठी</button>
+  </div>
+
+  <!-- Feedback Form Section -->
+  <section class="form-container">
+    <h2 data-en="Rice Quality Feedback" data-hi="चावल की गुणवत्ता प्रतिक्रिया" data-mr="तांदूळ गुणवत्ता प्रतिक्रिया">Rice Quality Feedback</h2>
+    <form id="feedbackForm" class="feedback-form">
+      <div class="form-group">
+        <label for="name" data-en="Your Name" data-hi="आपका नाम" data-mr="तुमचे नाव">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="riceType" data-en="Type of Rice" data-hi="चावल का प्रकार" data-mr="तांदूळ प्रकार">Type of Rice</label>
+        <select id="riceType" name="riceType" required>
+          <option value="" disabled selected data-en="Select rice type" data-hi="चावल का प्रकार चुनें" data-mr="तांदूळ प्रकार निवडा">Select rice type</option>
+          <option value="Basmati" data-en="Basmati" data-hi="बासमती" data-mr="बासमती">Basmati</option>
+          <option value="Brown" data-en="Brown" data-hi="भूरा" data-mr="तपकिरी">Brown</option>
+          <option value="Jasmine" data-en="Jasmine" data-hi="जैस्मिन" data-mr="जस्मिन">Jasmine</option>
+          <option value="Jyoti" data-en="Jyoti" data-hi="ज्योति" data-mr="ज्योती">Jyoti</option>
+          <option value="JSR(New)" data-en="JSR (New)" data-hi="जेएसआर (नया)" data-mr="JSR (नवीन)">JSR (New)</option>
+          <option value="JSR(Old)" data-en="JSR (Old)" data-hi="जेएसआर (पुराना)" data-mr="JSR (जुने)">JSR (Old)</option>
+          <option value="KKK" data-en="KKK" data-hi="केकेके" data-mr="केकेके">KKK</option>
+          <option value="Angur(Mukka)" data-en="Angur (Mukka)" data-hi="अंगूर (मुक्का)" data-mr="अंगूर (मुक्का)">Angur (Mukka)</option>
+          <option value="Angur(White)" data-en="Angur (White)" data-hi="अंगूर (सफेद)" data-mr="अंगूर (पांढरा)">Angur (White)</option>
+          <option value="Dawar" data-en="Dawar" data-hi="दावर" data-mr="दावर">Dawar</option>
+          <option value="Delhi Darbar" data-en="Delhi Darbar" data-hi="दिल्ली दरबार" data-mr="दिल्ली दरबार">Delhi Darbar</option>
+          <option value="Other" data-en="Other (Not listed)" data-hi="अन्य (सूची में नहीं)" data-mr="इतर (यादीत नाही)">Other (Not listed)</option>
+        </select>
+        <input type="text" id="otherRiceType" name="otherRiceType" placeholder="Type rice name (English/हिंदी में लिखें/मराठीत लिहा)" data-en="Type rice name" data-hi="चावल का नाम लिखें" data-mr="तांदूळ नाव लिहा" />
+      </div>
+
+      <div class="form-group">
+        <label data-en="Quality Rating" data-hi="गुणवत्ता रेटिंग" data-mr="गुणवत्ता रेटिंग">Quality Rating</label>
+        <div class="stars" data-rating="quality" role="radiogroup" aria-label="Quality Rating">
+          <i class="fas fa-star" data-value="1"></i>
+          <i class="fas fa-star" data-value="2"></i>
+          <i class="fas fa-star" data-value="3"></i>
+          <i class="fas fa-star" data-value="4"></i>
+          <i class="fas fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" name="quality" id="qualityRating" required />
+      </div>
+
+      <div class="form-group">
+        <label data-en="Taste Rating" data-hi="स्वाद रेटिंग" data-mr="चव रेटिंग">Taste Rating</label>
+        <div class="stars" data-rating="taste" role="radiogroup" aria-label="Taste Rating">
+          <i class="fas fa-star" data-value="1"></i>
+          <i class="fas fa-star" data-value="2"></i>
+          <i class="fas fa-star" data-value="3"></i>
+          <i class="fas fa-star" data-value="4"></i>
+          <i class="fas fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" name="taste" id="tasteRating" required />
+      </div>
+
+      <div class="form-group">
+        <label data-en="Price Satisfaction" data-hi="मूल्य संतुष्टि" data-mr="किंमत समाधान">Price Satisfaction</label>
+        <div class="stars" data-rating="price" role="radiogroup" aria-label="Price Satisfaction">
+          <i class="fas fa-star" data-value="1"></i>
+          <i class="fas fa-star" data-value="2"></i>
+          <i class="fas fa-star" data-value="3"></i>
+          <i class="fas fa-star" data-value="4"></i>
+          <i class="fas fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" name="price" id="priceRating" required />
+      </div>
+
+      <div class="form-group">
+        <label for="comment" data-en="Your Feedback" data-hi="आपकी प्रतिक्रिया" data-mr="तुमची प्रतिक्रिया">Your Feedback</label>
+        <textarea id="comment" name="comment" placeholder="Write your feedback..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" data-en="Submit Feedback" data-hi="प्रतिक्रिया सबमिट करें" data-mr="प्रतिक्रिया सबमिट करा">Submit Feedback</button>
+    </form>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h3 data-en="Thank You!" data-hi="धन्यवाद!" data-mr="धन्यवाद!">Thank You!</h3>
+      <p data-en="Your feedback has been submitted successfully." data-hi="आपकी प्रतिक्रिया सफलतापूर्वक सबमिट कर दी गई है।" data-mr="तुमची प्रतिक्रिया यशस्वीरीत्या सबमिट झाली आहे।">Your feedback has been submitted successfully.</p>
+      <button class="btn btn-secondary" data-en="Close" data-hi="बंद करें" data-mr="बंद करा">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p data-en="© 2025 RAJ ANAJ BHANDAR. All rights reserved." data-hi="© 2025 राज अनाज भंडार। सभी अधिकार सुरक्षित।" data-mr="© 2025 राज अनाज भंडार. सर्व हक्क राखीव।">© 2025 RAJ ANAJ BHANDAR. All rights reserved.</p>
+  </footer>
+</body>
+<script src="/public/script.js"></script>
+</html>
