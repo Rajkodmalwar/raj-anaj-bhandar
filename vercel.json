@@ -1,27 +1,12 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/feedback.js",
-      "use": "@vercel/node"
-    }
+    { "src": "api/feedback.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {
-      "src": "/api/feedback",
-      "dest": "api/feedback.js"
-    },
-    {
-      "src": "/admin",
-      "dest": "/admin/index.html"
-    },
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    }
+    { "src": "/api/feedback", "dest": "api/feedback.js" },
+    { "src": "/admin", "dest": "/admin/index.html" },
+    { "src": "/public/(.*)", "dest": "/public/$1" },
+    { "src": "/", "dest": "/index.html" }
   ]
 }
